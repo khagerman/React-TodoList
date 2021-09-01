@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
 import NewTodoForm from "./NewTodoForm";
-
+import "./TodoList.css";
 import { v4 as uuid } from "uuid";
 
 const TodoList = () => {
@@ -9,16 +9,18 @@ const TodoList = () => {
 
   const renderTodos = () => {
     return (
-      <ul>
-        {todos.map((todo) => (
-          <Todo
-            key={todo.id}
-            id={todo.id}
-            todo={todo.todo}
-            deleteTodo={deleteTodo}
-          />
-        ))}
-      </ul>
+      <div>
+        <ul>
+          {todos.map((todo) => (
+            <Todo
+              key={todo.id}
+              id={todo.id}
+              todo={todo.todo}
+              deleteTodo={deleteTodo}
+            />
+          ))}
+        </ul>
+      </div>
     );
   };
 
