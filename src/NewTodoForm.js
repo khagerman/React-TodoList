@@ -29,7 +29,7 @@ const NewTodoForm = ({ addTodo }) => {
         onChange={handleChange}
       />
 
-      <button>Add a new task</button>
+      <button>Add a new To Do!</button>
     </form>
   );
 };
